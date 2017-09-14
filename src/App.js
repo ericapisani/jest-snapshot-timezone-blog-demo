@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 import './App.css';
+import PropTypes from 'prop-types';
 
 class App extends Component {
+  static propTypes = {
+    currentDay: PropTypes.string.isRequired,
+  };
+
+  static defaultProps = {
+    currentDay: moment().format("MMM Do YYYY")
+  };
+
   render() {
-    const currentDay = moment().format("MMM Do YYYY");
+    const { currentDay } = this.props;
 
     return (
       <div className="App">
