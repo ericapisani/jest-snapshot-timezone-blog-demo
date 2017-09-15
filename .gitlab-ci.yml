@@ -16,5 +16,7 @@ build:
 
 test:
   stage: test
+  dependencies:
+    - build
   script:
     - yarn test -- --ci --runInBand
