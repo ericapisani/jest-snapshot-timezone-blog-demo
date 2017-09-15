@@ -1,0 +1,17 @@
+stages:
+  - build
+  - test
+
+cache:
+  key: yarn_cache
+  paths:
+    - .yarn_cache
+
+build:
+  script:
+    - yarn install --cache-folder ./.yarn_cache
+
+test:
+  stage: test
+  script:
+    - yarn test -- --ci --runInBand
