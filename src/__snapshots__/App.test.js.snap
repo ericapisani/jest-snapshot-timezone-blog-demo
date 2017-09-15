@@ -6,8 +6,8 @@ exports[`renders without crashing 1`] = `
 >
   Hello world!
   <p>
-    The current day is 
-    Sep 14th 2017
+    The day and time is currently 
+    Sep 15th 2017 4:19:15 pm
   </p>
 </div>
 `;

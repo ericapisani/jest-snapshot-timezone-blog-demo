@@ -9,7 +9,7 @@ class App extends Component {
   };
 
   static defaultProps = {
-    currentDay: moment().format("MMM Do YYYY")
+    currentDay: moment().format("MMM Do YYYY h:mm:ss a")
   };
 
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <div className="App">
         Hello world!
-        <p>The current day is {currentDay}</p>
+        <p>The day and time is currently {currentDay}</p>
       </div>
     );
   }
