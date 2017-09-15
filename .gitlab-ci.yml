@@ -9,15 +9,9 @@ cache:
   paths:
     - .yarn_cache
 
-build_script:
-  stage: build
+test_script:
+  stage: test
   script:
     - npm install yarn
     - yarn install --cache-folder ./.yarn_cache
-
-test_script:
-  stage: test
-  dependencies:
-    - build_script
-  script:
     - yarn test -- --ci --runInBand
