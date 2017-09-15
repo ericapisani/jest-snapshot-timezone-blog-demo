@@ -1,7 +1,6 @@
 image: node:8.4.0
 
 stages:
-  - build
   - test
 
 cache:
